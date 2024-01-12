@@ -9,7 +9,15 @@
 
 fn main() {
     let cat = ("Furry McFurson", 3.5);
-    let /* your pattern here */ = cat;
-
-    println!("{} is {} years old.", name, age);
+    let (name, age) = cat;
+    use std::time::Instant;
+    let now = Instant::now();
+    let mut x = 0;
+    let num = 100_000_000;
+    for i in 0..num {
+        x = x+1;
+    }
+    println!("x is {}", x);
+    let elapsed = now.elapsed();
+    println!("Elapsed: {:.2?}", elapsed);
 }

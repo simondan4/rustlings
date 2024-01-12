@@ -5,8 +5,12 @@
 // Execute `rustlings hint intro2` or use the `hint` watch subcommand for a
 // hint.
 
-// I AM NOT DONE
 
 fn main() {
-    printline!("Hello there!")
+    let mut line = String::new();
+    println!("Hello there! Enter your Name:");
+    let test = std::io::stdin().read_line(&mut line).unwrap();
+    println!("Hello {}!", line);
+    println!("This is my first print statement");
+    println!("This is my second print statement")
 }
